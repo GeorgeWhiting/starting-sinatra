@@ -10,5 +10,6 @@ get '/secret' do
 end
 
 get '/cat' do
+  @name_logic = ["Shrek", "John", "Sue", "Sellotape"].sample
   erb(:index)
 end
