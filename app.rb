@@ -9,7 +9,13 @@ get '/secret' do
   "Ogres have layers!"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name_logic = ["Shrek", "John", "Sue", "Sellotape"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name_logic = params[:name]
   erb(:index)
 end
