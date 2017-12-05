@@ -10,12 +10,18 @@ get '/secret' do
 end
 
 get '/random-cat' do
-  @name_logic = ["Shrek", "John", "Sue", "Sellotape"].sample
+  @name = ["Shrek", "John", "Sue", "Sellotape"].sample
   erb(:index)
 end
 
 get '/named-cat' do
   p params
-  @name_logic = params[:name]
+  @name = params[:name]
   erb(:index)
 end
+
+# post '/named-cat' do
+#   p params
+#   @name = params[:name]
+#   erb(:index)
+# end
